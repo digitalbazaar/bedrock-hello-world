@@ -1,5 +1,5 @@
 {
-  "name" : "HelloWorld",
+  "name" : "bedrock-hello-world",
   "version" : "0.0.0",
   "scripts": {
     "start": "node helloworld.js"
