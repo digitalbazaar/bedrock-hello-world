@@ -63,7 +63,7 @@ bedrock.events.on('bedrock-express.configure.routes', function(app) {
 
 Using express, we are now able respond to the specified route and send the text "Hello World!"
 
-Finally, to start our server we must add the following line to the program
+Finally, to start our server we must add the following line to the bottom of helloworld.js
 ```js
 bedrock.start();
 ```
