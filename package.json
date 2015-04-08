@@ -5,8 +5,8 @@
     "start": "node helloworld.js"
   },
   "dependencies": {
-    "bedrock": "~0.3.0",
-    "bedrock-express": "~0.2.0"
+    "bedrock": "^1.0.0",
+    "bedrock-express": "^1.0.0"
   },
   "engines": {
     "node": ">=0.10.0"
