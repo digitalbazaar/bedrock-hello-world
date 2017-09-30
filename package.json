@@ -1,15 +1,19 @@
 {
-  "name" : "bedrock-hello-world",
-  "version" : "0.0.0",
+  "name": "bedrock-hello-world",
+  "version": "0.0.0",
   "scripts": {
-    "start": "node helloworld.js"
+    "start": "node helloworld.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "bedrock": "^1.0.0",
-    "bedrock-express": "^1.0.0"
+    "bedrock-express": "^1.0.0",
+    "snyk": "^1.41.1"
   },
   "engines": {
     "node": ">=0.10.0"
   },
-  "main": "helloworld.js"
+  "main": "helloworld.js",
+  "snyk": true
 }
