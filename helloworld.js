@@ -1,5 +1,7 @@
 const bedrock = require('bedrock');
 
+require('bedrock-config-yaml');
+
 // includes the bedrock-express module which provides express capabilities.
 require('bedrock-express');
 

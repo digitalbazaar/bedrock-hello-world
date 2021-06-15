@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "bedrock": "^4.1.1",
+    "bedrock-config-yaml": "^2.0.0",
     "bedrock-express": "^4.0.0",
     "bedrock-server": "^2.7.0"
   },
