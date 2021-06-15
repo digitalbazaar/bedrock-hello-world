@@ -1,0 +1,45 @@
+name: Packaging
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CONTAINER_OWNER: digitalbazaar
+      CONTAINER_IMAGE_NAME: bedrock-hello-world
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+    - name: Get npm package version
+      id: version
+      uses: martinbeentjes/npm-get-version-action@v1.0.0
+    - name: Generate next release candidate number
+      id: rc
+      uses: zyborg/gh-action-buildnum@v1.1.0
+      with:
+        gist_token: ${{ secrets.VERES_BUILDER_CI_TOKEN }}
+        version_key: ${{ steps.version.outputs.current-version }}
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: quay.io
+        username:  digitalbazaar+write
+        password: ${{ secrets.QUAY_WRITE_TOKEN }}
+
+    - name: Publish Docker image
+      uses: docker/build-push-action@v2
+      with:
+        # only required if private NPM dependencies are involved
+        # build-args: |
+        #   NODE_AUTH_TOKEN=${{ secrets.VERES_BUILDER_CI_TOKEN }}
+        push: true
+        tags: quay.io/${{ env.CONTAINER_OWNER }}/${{ env.CONTAINER_IMAGE_NAME }}:${{ steps.version.outputs.current-version }}-rc${{ steps.rc.outputs.version_build_number }}
