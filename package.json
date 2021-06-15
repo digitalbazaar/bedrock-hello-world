@@ -2,7 +2,8 @@
   "name": "bedrock-hello-world",
   "version": "0.0.0",
   "scripts": {
-    "start": "node helloworld.js"
+    "start": "node helloworld.js",
+    "lint": "eslint ."
   },
   "dependencies": {
     "bedrock": "^4.1.1",
@@ -12,5 +13,9 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "main": "helloworld.js"
+  "main": "helloworld.js",
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-digitalbazaar": "^2.8.0"
+  }
 }
