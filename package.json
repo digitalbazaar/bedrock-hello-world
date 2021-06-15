@@ -9,6 +9,7 @@
     "bedrock": "^4.1.1",
     "bedrock-config-yaml": "^2.0.0",
     "bedrock-express": "^4.0.0",
+    "bedrock-health": "^1.0.2",
     "bedrock-server": "^2.7.0"
   },
   "engines": {

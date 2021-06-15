@@ -2,6 +2,7 @@ const bedrock = require('bedrock');
 const {config} = bedrock;
 
 require('bedrock-config-yaml');
+require('bedrock-health');
 
 // includes the bedrock-express module which provides express capabilities.
 require('bedrock-express');
