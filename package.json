@@ -12,7 +12,7 @@
     "bedrock-server": "^2.7.0"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=12"
   },
   "main": "helloworld.js",
   "devDependencies": {
