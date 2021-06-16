@@ -1,7 +1,7 @@
 # bedrock-hello-world
-bedrock hello world example project
+Bedrock hello world example project.
 
-##Hello World Example
+## Hello World Example
 
 To start, we must create a file, package.json, to setup our environment.
 
@@ -46,7 +46,7 @@ Now, we can add these lines to our helloworld.js
 
 ```js
 bedrock.events.on('bedrock-express.configure.routes', function(app) {
-  
+
 });
 ```
 This is a bedrock event listener, waiting for the event "bedrock-express.configure.routes" to be fired off. This event is triggered by our bedrock-express module once the express module is ready for routes to be added.
@@ -68,7 +68,7 @@ Finally, to start our server we must add the following line to the bottom of hel
 bedrock.start();
 ```
 
-This command will start our bedrock server and allow it to listen to oncoming routes. 
+This command will start our bedrock server and allow it to listen to oncoming routes.
 
 And that is all we need for our helloworld.js!
 
