@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "bedrock": "^4.1.1",
-    "bedrock-config-yaml": "^2.0.0",
+    "bedrock-config-yaml": "digitalbazaar/bedrock-config-yaml#gcp-secret",
     "bedrock-express": "^4.0.0",
     "bedrock-health": "^1.0.2",
     "bedrock-https-agent": "^2.0.0",

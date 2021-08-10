@@ -2,8 +2,8 @@ name: Packaging
 
 on:
   push:
-    tags:
-      - v*
+    branches:
+      - config-yaml-gcp-secret
 
 jobs:
   package:
@@ -42,4 +42,4 @@ jobs:
         # build-args: |
         #   NODE_AUTH_TOKEN=${{ secrets.VERES_BUILDER_CI_TOKEN }}
         push: true
-        tags: quay.io/${{ env.CONTAINER_OWNER }}/${{ env.CONTAINER_IMAGE_NAME }}:${{ steps.version.outputs.current-version }}-rc${{ steps.rc.outputs.version_build_number }}
+        tags: quay.io/${{ env.CONTAINER_OWNER }}/${{ env.CONTAINER_IMAGE_NAME }}:DEVELOPMENT-${{ steps.version.outputs.current-version }}-rc${{ steps.rc.outputs.version_build_number }}
