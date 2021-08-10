@@ -14,6 +14,13 @@ require('bedrock-express');
 
 require('./config');
 
+const si = require('systeminformation');
+
+bedrock.events.on('bedrock.start', async () => {
+  const cpuInfo = await si.system();
+  console.log('AAAAAAA', JSON.stringify(cpuInfo, null, 2));
+});
+
 // Waits for express to being listening to routes, which then allows us to
 // provide our own handlers for provided routes
 bedrock.events.on('bedrock-express.configure.routes', function(app) {

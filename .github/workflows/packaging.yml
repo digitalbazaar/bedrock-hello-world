@@ -2,8 +2,8 @@ name: Packaging
 
 on:
   push:
-    tags:
-      - v*
+    branches:
+      - system-information
 
 jobs:
   package:
