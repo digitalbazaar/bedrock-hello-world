@@ -19,6 +19,7 @@ const si = require('systeminformation');
 bedrock.events.on('bedrock.start', async () => {
   const cpuInfo = await si.uuid();
   console.log('SI.UUID', JSON.stringify(cpuInfo, null, 2));
+  console.log('ENVIRONMENT', JSON.stringify(process.env, null, 2));
 });
 
 // Waits for express to being listening to routes, which then allows us to
