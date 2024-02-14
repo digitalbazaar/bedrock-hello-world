@@ -1,6 +1,9 @@
 # bedrock-hello-world
 Bedrock hello world example project.
 
+## Archival Notice
+This repository out of date and is no longer maintained.
+
 ## Hello World Example
 
 To start, we must create a file, package.json, to setup our environment.
